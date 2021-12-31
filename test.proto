@@ -1,0 +1,12 @@
+syntax = "proto3";
+package test;
+
+service TestService {
+  rpc GetTest(TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+}
+message TestResponse {
+  map<int32, int32> response = 1;
+}

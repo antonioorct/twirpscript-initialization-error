@@ -1,8 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { GetActiveBeacons } from "./test.pb";
 
 function App() {
+  useEffect(() => {
+    GetActiveBeacons({ category_name: "", from_time: "", to_time: "" });
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
